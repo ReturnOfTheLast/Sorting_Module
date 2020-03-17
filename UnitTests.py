@@ -46,3 +46,18 @@ if Sorting.QuickSort([9, 3, 45, 23, 55, 432, 55], minLen) == [3, 9, 23, 45, 55, 
     quickSuccess += 1
 
 print("Quick Sort: " + str(quickSuccess) + "/" + str(quickCount))
+
+# Bogo Sort tests
+bogoCount = 3
+bogoSuccess = 0
+
+if Sorting.BogoSort([6, 8, 2, 13, 55, 332, 4]) == [2, 4, 6, 8, 13, 55, 332]:
+    bogoSuccess += 1
+
+if Sorting.BogoSort([6, 3, 2, 4, 932, 44, 32]) == [2, 3, 4, 6, 32, 44, 932]:
+    bogoSuccess += 1
+
+if Sorting.BogoSort([6, 5, 6, 33, 63, 33, 6, 44]) == [5, 6, 6, 6, 33, 33, 44, 63]:
+    bogoSuccess += 1
+
+print("Bogo Sort: " + str(bogoSuccess) + "/" + str(bogoCount))

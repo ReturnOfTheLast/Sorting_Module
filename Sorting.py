@@ -7,6 +7,7 @@ def StalinSort(args):
     while i < len(args) - 1:
         if args[i] > args[i+1]: del args[i+1]
         else: i += 1
+
     return args
 
 # Bubble Sort
@@ -42,4 +43,17 @@ def QuickSort(args, minLen):
         returnList.extend(QuickSort(splitPart1, minLen))
         returnList.append(args[part])
         returnList.extend(QuickSort(splitPart2, minLen))
+
     return returnList
+
+# Bogo Sort
+def BogoSort(args):
+    unsorted = 1
+    while unsorted > 0:
+        unsorted = 0
+        random.shuffle(args)
+
+        for i in range(0, len(args) - 1):
+            if args[i] > args[i+1]: unsorted += 1
+
+    return args

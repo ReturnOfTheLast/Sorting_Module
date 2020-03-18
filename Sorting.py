@@ -57,3 +57,12 @@ def BogoSort(args):
             if args[i] > args[i+1]: unsorted += 1
 
     return args
+
+def InsertionSort(args):
+    for i in range(1, len(args)):
+        j = i
+        for j in range(i, 0, -1):
+            if not (args[j - 1] > args[j]): break
+            args[j], args[j - 1] = args[j - 1], args[j]
+    
+    return args

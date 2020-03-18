@@ -61,3 +61,18 @@ if Sorting.BogoSort([6, 5, 6, 33, 63, 33, 6, 44]) == [5, 6, 6, 6, 33, 33, 44, 63
     bogoSuccess += 1
 
 print("Bogo Sort: " + str(bogoSuccess) + "/" + str(bogoCount))
+
+# Insertion Sort tests
+insertionCount = 3
+insertionSuccess = 0
+
+if Sorting.InsertionSort([6, 3, 23, 55, 33, 2, 54]) == [2, 3, 6, 23, 33, 54, 55]:
+    insertionSuccess += 1
+
+if Sorting.InsertionSort([7, 32, 44, 554, 32, 6, 3]) == [3, 6, 7, 32, 32, 44, 554]:
+    insertionSuccess += 1
+
+if Sorting.InsertionSort([3, 53, 23, 5, 77, 54, 83]) == [3, 5, 23, 53, 54, 77, 83]:
+    insertionSuccess += 1
+
+print("Insertion Sort: " + str(insertionSuccess) + "/" + str(insertionCount))

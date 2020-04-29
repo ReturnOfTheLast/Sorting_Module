@@ -4,7 +4,7 @@ A Sorting Module for Python
 ## Sorting algorithms
 Stalin sort - by me
 
-Bad stalin sort - modification by HighOnToxic
+Bad stalin sort - stalin sort alternative by HighOnToxins
 
 Bubble sort - by me
 

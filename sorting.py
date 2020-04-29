@@ -11,6 +11,18 @@ def stalin_sort(args):
 
     return args
 
+# Bad Stalin Sort
+def bad_stalin_sort(args):
+    i = 0
+    while i < len(args) - 1:
+        if args[i] > args[i+1]:
+            del args[i]
+            if i > 0:
+                i -= 1
+        else: i += 1
+
+    return args
+
 # Bubble Sort
 def bubble_sort(args):
     switches = 1

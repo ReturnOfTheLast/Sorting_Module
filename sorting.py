@@ -74,6 +74,7 @@ def bogo_sort(args):
 
     return args
 
+# Insertion Sort
 def insertion_sort(args):
     for i in range(1, len(args)):
         j = i

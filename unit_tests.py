@@ -20,13 +20,13 @@ print("Stalin Sort: " + str(STALIN_SUCCESS) + "/" + str(STALIN_COUNT))
 BAD_STALIN_COUNT = 3
 BAD_STALIN_SUCCESS = 0
 
-if sorting.bad_stalin_sort([5, 3, 55, 7, 9, 3, 2, 5, 2]) == [3, 7, 2, 2]:
+if sorting.bad_stalin_sort([5, 3, 55, 7, 9, 3, 2, 5, 2]) == [2, 2]:
     BAD_STALIN_SUCCESS += 1
 
-if sorting.bad_stalin_sort([6, 3, 22, 432, 666, 44, 9]) == [3, 22, 432, 9]:
+if sorting.bad_stalin_sort([6, 3, 22, 432, 666, 44, 9]) == [3, 9]:
     BAD_STALIN_SUCCESS += 1
 
-if sorting.bad_stalin_sort([8, 4, 22, 134, 88, 3, 999, 332, 445]) == [4, 22, 3, 332, 445]:
+if sorting.bad_stalin_sort([8, 4, 22, 134, 88, 3, 999, 332, 445]) == [3, 332, 445]:
     BAD_STALIN_SUCCESS += 1
 
 print("Bad Stalin Sort: " + str(BAD_STALIN_SUCCESS) + "/" + str(BAD_STALIN_COUNT))

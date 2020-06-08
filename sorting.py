@@ -2,85 +2,85 @@
 import random
 
 # Stalin Sort
-def stalin_sort(args):
+def stalin_sort(input_list):
     i = 0
-    while i < len(args) - 1:
-        if args[i] > args[i+1]:
-            del args[i+1]
+    while i < len(input_list) - 1:
+        if input_list[i] > input_list[i+1]:
+            del input_list[i+1]
         else: i += 1
 
-    return args
+    return input_list
 
 # Bad Stalin Sort
-def bad_stalin_sort(args):
+def bad_stalin_sort(input_list):
     i = 0
-    while i < len(args) - 1:
-        if args[i] > args[i+1]:
-            del args[i]
+    while i < len(input_list) - 1:
+        if input_list[i] > input_list[i+1]:
+            del input_list[i]
             if i > 0:
                 i -= 1
         else: i += 1
 
-    return args
+    return input_list
 
 # Bubble Sort
-def bubble_sort(args):
+def bubble_sort(input_list):
     switches = 1
     while switches > 0:
         switches = 0
-        for i in range(0, len(args) - 1):
-            if args[i] > args[i + 1]:
-                args[i], args[i + 1] = args[i + 1], args[i]
+        for i in range(0, len(input_list) - 1):
+            if input_list[i] > input_list[i + 1]:
+                input_list[i], input_list[i + 1] = input_list[i + 1], input_list[i]
                 switches += 1
 
-    return args
+    return input_list
 
 # Quick Sort
-def quick_sort(args, min_len):
-    if len(args) < min_len:
-        return bubble_sort(args)
+def quick_sort(input_list, min_len):
+    if len(input_list) < min_len:
+        return bubble_sort(input_list)
 
     else:
-        part = random.randint(0, len(args) - 1)
+        part = random.randint(0, len(input_list) - 1)
         split_part1 = list()
         split_part2 = list()
 
-        for i in range(0, len(args)):
+        for i in range(0, len(input_list)):
             if i == part:
                 continue
 
-            elif args[i] < args[part]:
-                split_part1.append(args[i])
+            elif input_list[i] < input_list[part]:
+                split_part1.append(input_list[i])
             else:
-                split_part2.append(args[i])
+                split_part2.append(input_list[i])
 
         return_list = list()
         return_list.extend(quick_sort(split_part1, min_len))
-        return_list.append(args[part])
+        return_list.append(input_list[part])
         return_list.extend(quick_sort(split_part2, min_len))
 
     return return_list
 
 # Bogo Sort
-def bogo_sort(args):
+def bogo_sort(input_list):
     unsorted = 1
     while unsorted > 0:
         unsorted = 0
-        random.shuffle(args)
+        random.shuffle(input_list)
 
-        for i in range(0, len(args) - 1):
-            if args[i] > args[i+1]:
+        for i in range(0, len(input_list) - 1):
+            if input_list[i] > input_list[i+1]:
                 unsorted += 1
 
-    return args
+    return input_list
 
 # Insertion Sort
-def insertion_sort(args):
-    for i in range(1, len(args)):
+def insertion_sort(input_list):
+    for i in range(1, len(input_list)):
         j = i
         for j in range(i, 0, -1):
-            if not args[j - 1] > args[j]:
+            if not input_list[j - 1] > input_list[j]:
                 break
-            args[j], args[j - 1] = args[j - 1], args[j]
+            input_list[j], input_list[j - 1] = input_list[j - 1], input_list[j]
 
-    return args
+    return input_list

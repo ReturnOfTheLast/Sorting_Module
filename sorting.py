@@ -36,9 +36,9 @@ def bubble_sort(input_list):
     return input_list
 
 # Quick Sort
-def quick_sort(input_list, min_len):
+def quick_sort(input_list, min_len=5):
     if len(input_list) < min_len:
-        return bubble_sort(input_list)
+        return insertion_sort(input_list)
 
     else:
         part = random.randint(0, len(input_list) - 1)

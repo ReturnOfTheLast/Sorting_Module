@@ -11,18 +11,6 @@ def stalin_sort(input_list):
 
     return input_list
 
-# Bad Stalin Sort
-def bad_stalin_sort(input_list):
-    i = 0
-    while i < len(input_list) - 1:
-        if input_list[i] > input_list[i+1]:
-            del input_list[i]
-            if i > 0:
-                i -= 1
-        else: i += 1
-
-    return input_list
-
 # Bubble Sort
 def bubble_sort(input_list):
     switches = 1
